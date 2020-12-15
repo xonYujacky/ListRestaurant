@@ -9,18 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".StarterActivity"
-            android:label="Starters"
-            android:parentActivityName=".MainActivity"
 
-            />
-        <activity
-            android:name=".MainCoursesActivity"
-            android:label="Main Courses"
-            android:parentActivityName=".MainActivity"
-
-            />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +17,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".StarterActivity"
+            android:label="Starters"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainCoursesActivity"
+            android:label="Main Courses"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DessertActivity"
+            android:label="Dessert"
+            android:parentActivityName=".MainActivity" />
+
     </application>
 
 </manifest>

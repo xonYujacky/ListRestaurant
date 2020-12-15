@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp"
-        android:background="@color/colorCustom1">
+        android:background="@color/colorCustom1"
+        android:padding="24dp">
 
 
         <TextView
@@ -18,19 +17,19 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif-condensed-light"
             android:text="The Hungry Restaurant"
-            android:textColor="@color/colorCustom"
+            android:textColor="@color/colorCustom2"
+            android:textStyle="bold"
             android:textSize="24sp" />
 
         <TextView
-            android:padding="12dp"
             android:id="@+id/text_view_restaurant_email"
-            android:fontFamily="sans-serif-medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="thehungryrestaurant@xonyujacky.com"
             android:layout_below="@+id/text_view_restaurant_name"
             android:layout_centerHorizontal="true"
-            />
+            android:fontFamily="sans-serif-medium"
+            android:padding="12dp"
+            android:text="thehungryrestaurant@xonyujacky.com" />
 
         //Card View
 
@@ -74,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/card_view_starter"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="250dp">
+            android:layout_marginTop="60dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -84,19 +83,53 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:src="@drawable/main"
                     android:scaleType="centerCrop"
-                    />
+                    android:src="@drawable/main" />
 
                 <TextView
                     android:id="@+id/text_view_main_course"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Main Courses"
-                    android:layout_margin="8dp"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
-                    android:fontFamily="sans-serif-black"/>
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Main Courses"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_dessert"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view_main_course"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/desserts" />
+
+                <TextView
+                    android:id="@+id/text_view_dessert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Dessert"
+                    android:textSize="18sp" />
+
+
             </LinearLayout>
 
 
@@ -104,8 +137,6 @@
 
 
     </RelativeLayout>
-
-
 
 
 </ScrollView>

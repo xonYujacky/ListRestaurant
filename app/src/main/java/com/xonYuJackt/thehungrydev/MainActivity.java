@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView starterCard;
     CardView mainCard;
+    CardView dessertCard;
     TextView text_email_address;
 
     @Override
@@ -44,8 +45,15 @@ public class MainActivity extends AppCompatActivity {
                 lauchEmailAppIntent.setData(Uri.parse("mailto:thehungryrestaurant@xonyujacky.com" +text_email_address));
                 lauchEmailAppIntent.putExtra(Intent.EXTRA_EMAIL, "THe Hungry Restaurant");
                 lauchEmailAppIntent.putExtra(Intent.EXTRA_SUBJECT, "Hallow!");
-
                 startActivity(lauchEmailAppIntent);
+            }
+        });
+
+        dessertCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dessertIntent = new Intent(MainActivity.this,DessertActivity.class);
+                startActivity(dessertIntent);
             }
         });
 
@@ -55,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private void findView(){
         starterCard = findViewById(R.id.card_view_starter);
         mainCard = findViewById(R.id.card_view_main_course);
+        dessertCard = findViewById(R.id.card_view_dessert);
         text_email_address = findViewById(R.id.text_view_restaurant_email);
     }
 }
